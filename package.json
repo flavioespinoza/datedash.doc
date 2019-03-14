@@ -1,6 +1,6 @@
 {
     "name": "datedash.doc",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "datedash documentation",
     "author": "Flavio Espinoza <flavio.espinoza@gmail.com>",
     "license": "MIT",
@@ -14,7 +14,7 @@
     "scripts": {
         "build": "npm run build:jekyll && npm run build:site",
         "build:config": "gulp build-config --release",
-        "build:jekyll": "cross-env JEKYLL_ENV=production PAGES_GITHUB_HOSTNAME=lodash.com bundle exec jekyll build",
+        "build:jekyll": "cross-env JEKYLL_ENV=production PAGES_GITHUB_HOSTNAME=datedash.doc bundle exec jekyll build",
         "build:site": "gulp build",
         "build:vendor": "gulp build-vendor",
         "test": "test"
