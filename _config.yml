@@ -1,13 +1,14 @@
 repository: flavioespinoza/datedash.doc
 
 release:
-  &release 1.0.35
+  &release 1.0.39
 
 releases:
   - *release
-  - 4.17.11
-  - 3.10.1
-  - 2.4.2
+  - 1.0.38
+  - 1.0.37
+  - 1.0.36
+  - 1.0.35
 
 brand_color: "#3492ff"
 description: A JavaScript Date utility library boiled down to the essentials. Inspired by Lodash.
@@ -48,43 +49,47 @@ sass:
 
 builds:
   *release:
-    href: https://cdn.jsdelivr.net/npm/datedash@1.0.35/datedash.min.js
-    integrity: sha384-3HWZ0KJxkQ3nhRpHPzk4AO2iIy1S8rSGwN5MpMS/xf34mqOahLqEbqwvdk48EnEa
+    href: /vendor/cdn.jsdelivr.net/npm/datedash@1.0.39/datedash.min.js
+    integrity: sha384-cPb3x/Es3B6vXhYyDNhqqz7Ire1jgprCcCBp0UCUp0nokGf/zYvjHM5zau8j2Ozd
 
-  4.17.11:  
-    href: https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js
-    integrity: sha384-2HWZ0KJxkQ3nhRpHPzk4AO2iIy1S8rSGwN5MpMS/xf34mqOahLqEbqwvdk48EnEv
+  1.0.38:  
+    href: /vendor/cdn.jsdelivr.net/npm/datedash@1.0.38/datedash.min.js
+    integrity: sha384-Gb3VZORAGRy7ooIP34z7Hz2L6TZvP1iCCVHJAeqMcHkcM9bJHujz048/kqLyJUj3
 
-  3.10.1:
-    href: https://cdn.jsdelivr.net/lodash/3.10.1/lodash.min.js
-    integrity: sha384-0BrUT26SU4JPtbvE/hI6oj4mbEXE32qhRoD51rUTB+QFrg6ViIceJR8op6FmEIA1
+  1.0.37:  
+    href: /vendor/cdn.jsdelivr.net/npm/datedash@1.0.37/datedash.min.js
+    integrity: sha384-Gb3VZORAGRy7ooIP34z7Hz2L6TZvP1iCCVHJAeqMcHkcM9bJHujz048/kqLyJUj3
 
-  2.4.2:
-    href: https://cdn.jsdelivr.net/npm/lodash@2.4.2/dist/lodash.min.js
-    integrity: sha384-i14qZ6FYmJXQABb+YG5tH4NXjKOLznxsr5jFsNiJNRcQ77978BoUif762EQyydgt
+  1.0.36:  
+    href: /vendor/cdn.jsdelivr.net/npm/datedash@1.0.36/datedash.min.js
+    integrity: sha384-aIzULKkrKq+mN33g77nT6IEyOax/nXBJiCYdClcwkb/tLRup0a7RUC+ycOhTXPQh
+
+  1.0.35:  
+    href: /vendor/cdn.jsdelivr.net/npm/datedash@1.0.35/datedash.min.js
+    integrity: sha384-bk2uSoeGWRwK0F0UIJG+yNu7kVoa33IiW04wfHZ0m+A8mdb6CWCQP/8IUf7uyDmG
 
 font-face:
   fontawesome:
     regular:
-      - https://cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0
-      - https://cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0
+      - /vendor/cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0
+      - /vendor/cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0
 
   sourcecodepro:
     light:
-      - https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqSP2LEk6lMzYsRqr3dHFImA.woff2
+      - /vendor/fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqSP2LEk6lMzYsRqr3dHFImA.woff2
     semi-bold:
-      - https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqczFoXZ-Kj537nB_-9jJhlA.woff2
+      - /vendor/fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqczFoXZ-Kj537nB_-9jJhlA.woff2
 
 vendor:
   css:
-    - href: https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css
+    - href: /vendor/cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css
       integrity: sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN
 
   js:
     - href: https://embed.runkit.com/
       async: true
 
-    - href: https://cdn.jsdelivr.net/g/fuse@2.6.1,react@15.4.0(react.min.js+react-dom.min.js
+    - href: /vendor/cdn.jsdelivr.net/g/fuse@2.6.1,react@15.4.0(react.min.js+react-dom.min.js
       integrity: sha384-txLSiuN1HJSO1or/mE1Y6bvgD0cV3WA6Ss7rs9WqvPQ3zthR8w/DzHpB+DVTDAMz
 
 carbon_ads:
