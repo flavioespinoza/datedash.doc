@@ -1,6 +1,6 @@
 {
     "name": "datedash.doc",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "datedash documentation",
     "author": "Flavio Espinoza <flavio.espinoza@gmail.com>",
     "license": "MIT",
@@ -62,5 +62,7 @@
         "to-ico": "^1.1.4",
         "uglify-js": "^3.0.16"
     },
-    "dependencies": {}
+    "dependencies": {
+        "docs": "^0.0.0-37"
+    }
 }
