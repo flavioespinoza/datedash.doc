@@ -49,47 +49,47 @@ sass:
 
 builds:
   *release:
-    href: /vendor/cdn.jsdelivr.net/npm/datedash@1.0.39/datedash.min.js
+    href: https://cdn.jsdelivr.net/npm/datedash@1.0.39/datedash.min.js
     integrity: sha384-CABr7+WPGheg2wDpYnF1Bm9XZMqmxEUbWbTEVL9sc8qHmSp7T2seWcVMc+rD5LJD
 
   1.0.38:  
-    href: /vendor/cdn.jsdelivr.net/npm/datedash@1.0.38/datedash.min.js
+    href: https://cdn.jsdelivr.net/npm/datedash@1.0.38/datedash.min.js
     integrity: sha384-cPb3x/Es3B6vXhYyDNhqqz7Ire1jgprCcCBp0UCUp0nokGf/zYvjHM5zau8j2Ozd
 
   1.0.37:  
-    href: /vendor/cdn.jsdelivr.net/npm/datedash@1.0.37/datedash.min.js
+    href: https://cdn.jsdelivr.net/npm/datedash@1.0.37/datedash.min.js
     integrity: sha384-Gb3VZORAGRy7ooIP34z7Hz2L6TZvP1iCCVHJAeqMcHkcM9bJHujz048/kqLyJUj3
 
   1.0.36:  
-    href: /vendor/cdn.jsdelivr.net/npm/datedash@1.0.36/datedash.min.js
+    href: https://cdn.jsdelivr.net/npm/datedash@1.0.36/datedash.min.js
     integrity: sha384-aIzULKkrKq+mN33g77nT6IEyOax/nXBJiCYdClcwkb/tLRup0a7RUC+ycOhTXPQh
 
   1.0.35:  
-    href: /vendor/cdn.jsdelivr.net/npm/datedash@1.0.35/datedash.min.js
+    href: https://cdn.jsdelivr.net/npm/datedash@1.0.35/datedash.min.js
     integrity: sha384-bk2uSoeGWRwK0F0UIJG+yNu7kVoa33IiW04wfHZ0m+A8mdb6CWCQP/8IUf7uyDmG
 
 font-face:
   fontawesome:
     regular:
-      - /vendor/cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0
-      - /vendor/cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0
+      - https://cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0
+      - https://cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0
 
   sourcecodepro:
     light:
-      - /vendor/fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqSP2LEk6lMzYsRqr3dHFImA.woff2
+      - https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqSP2LEk6lMzYsRqr3dHFImA.woff2
     semi-bold:
-      - /vendor/fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqczFoXZ-Kj537nB_-9jJhlA.woff2
+      - https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqczFoXZ-Kj537nB_-9jJhlA.woff2
 
 vendor:
   css:
-    - href: /vendor/cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css
+    - href: https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css
       integrity: sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN
 
   js:
     - href: https://embed.runkit.com/
       async: true
 
-    - href: /vendor/cdn.jsdelivr.net/g/fuse@2.6.1,react@15.4.0(react.min.js+react-dom.min.js
+    - href: https://cdn.jsdelivr.net/g/fuse@2.6.1,react@15.4.0(react.min.js+react-dom.min.js
       integrity: sha384-txLSiuN1HJSO1or/mE1Y6bvgD0cV3WA6Ss7rs9WqvPQ3zthR8w/DzHpB+DVTDAMz
 
 carbon_ads:

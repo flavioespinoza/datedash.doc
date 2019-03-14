@@ -17,7 +17,6 @@
         "build:config": "gulp build-config --release",
         "build:jekyll": "cross-env JEKYLL_ENV=production PAGES_GITHUB_HOSTNAME=flavioespinoza.github.io/datedash.doc bundle exec jekyll build",
         "build:site": "gulp build",
-        "build:vendor": "gulp build-vendor",
         "test": "test"
     },
     "repository": {
@@ -62,7 +61,5 @@
         "to-ico": "^1.1.4",
         "uglify-js": "^3.0.16"
     },
-    "dependencies": {
-        "docs": "^0.0.0-37"
-    }
+    "dependencies": {}
 }
