@@ -1,0 +1,2 @@
+# datedash.doc
+datedash documentation
