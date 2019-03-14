@@ -1,1 +1,114 @@
-theme: jekyll-theme-midnight
+repository: flavioespinoza/datedash.doc
+
+release:
+  &release 1.0.35
+
+releases:
+  - *release
+  - 4.17.11
+  - 3.10.1
+  - 2.4.2
+
+brand_color: "#3492ff"
+description: A JavaScript Date utility library boiled down to the essentials. Inspired by Lodash.
+
+css:
+  all:
+    - /assets/css/main.css
+
+js:
+  all:
+    - /assets/js/boot.js
+
+  docs:
+    - /assets/js/docs.js
+
+  home:
+    - /assets/js/home.js
+
+links:
+  build_differences:
+    https://github.com/flavioespinoza/datedash
+
+  docs_v1:
+    https://github.com/flavioespinoza/datedash/doc/README.md
+
+  org:
+    https://github.com/flavioespinoza/datedash
+
+  raw:
+    https://raw.githubusercontent.com/flavioespinoza/datedash
+
+  repo:
+    https://github.com/flavioespinoza/datedash
+
+sass:
+  sass_dir:
+    assets/css
+
+builds:
+  *release:
+    href: https://cdn.jsdelivr.net/npm/datedash@1.0.35/datedash.min.js
+    integrity: sha384-3HWZ0KJxkQ3nhRpHPzk4AO2iIy1S8rSGwN5MpMS/xf34mqOahLqEbqwvdk48EnEa
+
+  4.17.11:  
+    href: https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js
+    integrity: sha384-2HWZ0KJxkQ3nhRpHPzk4AO2iIy1S8rSGwN5MpMS/xf34mqOahLqEbqwvdk48EnEv
+
+  3.10.1:
+    href: https://cdn.jsdelivr.net/lodash/3.10.1/lodash.min.js
+    integrity: sha384-0BrUT26SU4JPtbvE/hI6oj4mbEXE32qhRoD51rUTB+QFrg6ViIceJR8op6FmEIA1
+
+  2.4.2:
+    href: https://cdn.jsdelivr.net/npm/lodash@2.4.2/dist/lodash.min.js
+    integrity: sha384-i14qZ6FYmJXQABb+YG5tH4NXjKOLznxsr5jFsNiJNRcQ77978BoUif762EQyydgt
+
+font-face:
+  fontawesome:
+    regular:
+      - https://cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0
+      - https://cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0
+
+  sourcecodepro:
+    light:
+      - https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqSP2LEk6lMzYsRqr3dHFImA.woff2
+    semi-bold:
+      - https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqczFoXZ-Kj537nB_-9jJhlA.woff2
+
+vendor:
+  css:
+    - href: https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css
+      integrity: sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN
+
+  js:
+    - href: https://embed.runkit.com/
+      async: true
+
+    - href: https://cdn.jsdelivr.net/g/fuse@2.6.1,react@15.4.0(react.min.js+react-dom.min.js
+      integrity: sha384-txLSiuN1HJSO1or/mE1Y6bvgD0cV3WA6Ss7rs9WqvPQ3zthR8w/DzHpB+DVTDAMz
+
+carbon_ads:
+  href: https://cdn.carbonads.com/carbon.js?serve=CKYIEK37&placement=lodashcom
+  id: _carbonads_js
+
+google_analytics:
+  href: https://www.google-analytics.com/analytics.js
+  commands: [['create', 'UA-ACCOUNT-ID', 'auto'], ['require', 'linkid'], ['send', 'pageview']]
+  accounts:
+    datedash.doc: 'UA-136250397-1'
+
+exclude:
+  - node_modules
+  - Gemfile
+  - gulpfile.js
+  - icons.js
+  - LICENSE
+  - package.json
+  - "*.lock"
+  - "*.log"
+  - "*.md"
+  - "*.toml"
+
+include:
+  - _headers
+  - _redirects

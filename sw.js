@@ -1,38 +1,101 @@
+---
+ignored: [
+  'appcache.html',
+  'manifest.appcache',
+  'robots.txt'
+]
+prefetch: [
+  '/sw.js',
+  '/manifest.webmanifest',
+  '/icons/apple-touch-180x180.png',
+  '/icons/favicon-32x32.png'
+]
+---
 'use strict'
 
+{% assign ignored = page.ignored %}
+{% assign prefetch = page.prefetch %}
 
+{% comment %}
+Add conditionally ignored files.
+{% endcomment %}
+{% unless site.github.hostname == 'github.com' %}
+  {% assign ignored = ignored | push:'favicon-16x16.png' %}
+{% endunless %}
 
+{% comment %}
+Add site css to prefetch.
+{% endcomment %}
+{% for hrefs in site.css %}
+  {% for href in hrefs[1] %}
+    {% assign prefetch = prefetch | push:href %}
+  {% endfor %}
+{% endfor %}
 
+{% comment %}
+Add site font faces to prefetch.
+{% endcomment %}
+{% for family in site.font-face %}
+  {% for style in family[1] %}
+    {% for href in style[1] %}
+      {% assign prefetch = prefetch | push:href %}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
 
+{% comment %}
+Add site js prefetch.
+{% endcomment %}
+{% for hrefs in site.js %}
+  {% for href in hrefs[1] %}
+    {% assign basename = href | split:'/' | last %}
+    {% assign ignored = ignored | push:basename %}
+    {% assign prefetch = prefetch | push:href %}
+  {% endfor %}
+{% endfor %}
 
+{% comment %}
+Add static files to prefetch.
+{% endcomment %}
+{% for file in site.static_files %}
+  {% assign basename = file.path | split:'/' | last %}
+  {% unless ignored contains basename or file.path contains 'anchor-js' %}
+    {% assign prefetch = prefetch | push:file.path %}
+  {% endunless %}
+{% endfor %}
 
+{% comment %}
+Add html pages to prefetch.
+{% endcomment %}
+{% for page in site.html_pages %}
+  {% assign href = '/' | append:page.path %}
+  {% assign prefetch = prefetch | push:href %}
+{% endfor %}
 
+{% comment %}
+Add datedash scripts to prefetch.
+{% endcomment %}
+{% for res in site.builds %}
+  {% assign prefetch = prefetch | push:res[1].href %}
+{% endfor %}
 
+{% comment %}
+Add vendor files to prefetch.
+{% endcomment %}
+{% for resources in site.vendor %}
+  {% for res in resources[1] %}
+    {% assign prefetch = prefetch | push:res.href %}
+  {% endfor %}
+{% endfor %}
 
+{% comment %}
+Cleanup prefetch.
+{% endcomment %}
+{% assign prefetch = prefetch | uniq | sort %}
 
+const BUILD_REV = '{{ site.github.build_revision }}'
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const BUILD_REV = '7330b4c3dbc5b649eb0df8963b36858b3a79204f'
-
-const prefetch = ["/404.html","/assets/css/main.css","/assets/img/lodash.svg","/assets/js/boot.js","/assets/js/docs.js","/assets/js/home.js","/custom-builds.html","/docs/2.4.2.html","/docs/3.10.1.html","/docs/4.17.11.html","/docs/index.html","/icons/apple-touch-180x180.png","/icons/favicon-16x16.png","/icons/favicon-32x32.png","/icons/icon.svg","/icons/safari-pinned-tab-16x16.svg","/index.html","/manifest.webmanifest","/package-lock.json","/sw.js","https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css","https://cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0","https://cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0","https://cdn.jsdelivr.net/g/fuse@2.6.1,react@15.4.0(react.min.js+react-dom.min.js","https://cdn.jsdelivr.net/lodash/3.10.1/lodash.min.js","https://cdn.jsdelivr.net/npm/lodash@2.4.2/dist/lodash.min.js","https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js","https://embed.runkit.com/","https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqSP2LEk6lMzYsRqr3dHFImA.woff2","https://fonts.gstatic.com/s/sourcecodepro/v6/leqv3v-yTsJNC7nFznSMqczFoXZ-Kj537nB_-9jJhlA.woff2"]
+const prefetch = {{ prefetch | jsonify }}
   .map(href => new URL(href, location))
 
 const redirect = [/*insert_redirect*/]

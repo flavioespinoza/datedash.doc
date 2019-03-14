@@ -1,8 +1,10 @@
+---
+---
 {
-  "name": "Lodash",
-  "short_name": "Lodash",
+  "name": "datedash",
+  "short_name": "datedash",
   "background_color": "transparent",
-  "description": "A JavaScript utility library delivering consistency, modularity, performance, & extras.",
+  "description": "{{ site.description }}",
   "display": "standalone",
   "lang": "en",
   "scope": "/",
@@ -25,7 +27,7 @@
       "type": "image/png"
     },
     {
-      "src": "/assets/img/lodash.svg",
+      "src": "/assets/img/datedash.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }
