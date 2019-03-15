@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 393051d42545dd1591c0e4410020f4b91f38bfa4
+# Revision 8561f9bf8b4832e5ef3c1a8a49f4fe3df6246d1a
 
 /404
 /assets/css/main.css
@@ -25,7 +25,6 @@ CACHE MANIFEST
 /index.html
 /index.lodash.com
 /package-lock.json
-/package.lodash.com.json
 /vendor/cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css
 /vendor/cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff
 /vendor/cdn.jsdelivr.net/fontawesome/4.7.0/fonts/fontawesome-webfont.woff2
